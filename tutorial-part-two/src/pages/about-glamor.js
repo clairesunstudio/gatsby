@@ -1,26 +1,36 @@
-import React from 'react'
-import Container from "../components/container"
-import styles from "./about-css-modules.module.css";
+import React from "react";
 
+import Container from "../components/container";
 
 const User = props =>
-  <div className={styles.user}>
-    <img src={props.avatar} className={styles.avatar} alt="" />
-    <div className={styles.description}>
-      <h2 className={styles.username}>
+  <div
+    css={{
+      display: `flex`,
+      alignItems: `center`,
+      margin: `0 auto 12px auto`,
+      "&:last-child": { marginBottom: 0 }
+    }}
+  >
+    <img
+      src={props.avatar}
+      css={{ flex: `0 0 96px`, width: 96, height: 96, margin: 0 }}
+      alt=""
+    />
+
+    <div css={{ flex: 1, marginLeft: 18, padding: 12 }}>
+      <h2 css={{ margin: `0 0 12px 0`, padding: 0 }}>
         {props.username}
       </h2>
-      <p className={styles.excerpt}>
+      <p css={{ margin: 0 }}>
         {props.excerpt}
       </p>
     </div>
   </div>
 
-
 export default () => (
   <Container>
-    <h1>About CSS Modules</h1>
-    <p>CSS Modules are cool</p>
+    <h1>About Glamor</h1>
+    <p>Glamor is cool</p>
     <User
       username="Jane Doe"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
@@ -33,4 +43,4 @@ export default () => (
       excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   </Container>
-)
+);
