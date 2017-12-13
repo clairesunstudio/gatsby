@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/blog-post.js`),
           context: {
             // Data passed to context is available in page queries as GraphQL variables.
-            slug: node.fields.slug,
+            slug: node.fields.slug, //Used as $slug
           },
         })
       })
