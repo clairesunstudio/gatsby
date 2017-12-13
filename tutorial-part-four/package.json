@@ -12,6 +12,7 @@
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-glamor": "^1.6.10",
     "gatsby-plugin-typography": "^1.7.10",
+    "gatsby-source-filesystem": "^1.5.11",
     "glamorous": "^4.11.0",
     "typography-theme-kirkham": "^0.16.3"
   }
